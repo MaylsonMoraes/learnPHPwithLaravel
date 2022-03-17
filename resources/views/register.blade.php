@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn PHP FullStack</title>
+    <title>Academia Chute Boxe No Stress</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
@@ -12,7 +12,7 @@
     <div class="container">
       <main>
         <div class="py-5 text-center">
-          <img class="d-block mx-auto mb-4" src="/img/imgchutebox.jpg" alt="" width="82" height="67">
+          <img class="d-block mx-auto mb-4" src="img/imgchutebox.jpg" alt="Banner" width="82" height="67">
           <h2>Academia Chute Boxe No Stress</h2>
           <p class="lead">Cadastro de Alunos</p>
         </div>       
@@ -35,8 +35,28 @@
                     É necessário preencher o sobrenome!
                   </div>
                 </div>
+
+                <div class="col-sm-6">
+                  <label for="sex" class="form-label">Sexo</label>
+                  <select class="form-select" id="sex" required>
+                    <option value="">Selecione...</option>
+                    <option>Homen</option>
+                    <option>Mulher</option>
+                  </select>
+                    <div class="invalid-feedback">
+                      É necessário selecionar um sexo!
+                    </div>      
+                </div>
     
-                <div class="col-12">
+                <div class="col-sm-6">
+                  <label for="birthDate" class="form-label">Data de nascimento</label>
+                  <input name="birthDate" type="text" class="form-control" id="birthDate" placeholder="">
+                  <div class="invalid-feedback">
+                    Data incorreta!
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
                   <label for="fone" class="form-label">Telefone de contato</label>
                     <input name= "fone" type="text" class="form-control" id="fone" placeholder="" required>
                     <div class="invalid-feedback">
@@ -44,7 +64,7 @@
                     </div>      
                 </div>
     
-                <div class="col-12">
+                <div class="col-sm-6">
                   <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
                   <input name="email" type="text" class="form-control" id="email" placeholder="">
                   <div class="invalid-feedback">
