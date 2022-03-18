@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia Chute Boxe No Stress</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  @extends('layouts.main')
 
-</head>
-<body class="bg-light">   
+  @section('title', 'Cadastro')
+
+  @section('content')  
     <div class="container">
       <main>
         <div class="py-5 text-center">
-          <img class="d-block mx-auto mb-4" src="img/imgchutebox.jpg" alt="Banner" width="82" height="67">
+          <img class="d-block mx-auto mb-4" src="img/imgchutebox.jpg" alt="Chute Boxe No Stress" width="82" height="67">
           <h2>Academia Chute Boxe No Stress</h2>
           <p class="lead">Cadastro de Alunos</p>
         </div>       
           <div class="col-md-12">
-            <h4 class="mb-3">Informações básicas de cadastro</h4>
+            <h4 class="mb-3">Informações básicas</h4>
             <form class="needs-validation" novalidate>
               <div class="row g-3">
                 <div class="col-sm-6">
@@ -125,17 +119,5 @@
           </div>
         </div>
       </main>
-    
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2022 Academia Chute Boxe No Stress</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
     </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+  @endsection

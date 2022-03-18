@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'HDC Events')
+@section('title', 'Home')
 
 @section('content')
 
-<h1>Algum titulo</h1>
+<h1>Chute Boxe No Stress</h1>
 
 @endsection

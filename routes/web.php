@@ -14,11 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/login', function () {
     return view('login');
 });
 Route::get('/register', function () {
     return view('register');
+});
+Route::get('/martialarts/{id}', function ($id) {
+    return view('martialArt', ['id' => $id]);
+});
+Route::get('/products', function () {
+    
+    $busca = request('search');
+
+    return view('product', ['busca' => $busca]);
 });
