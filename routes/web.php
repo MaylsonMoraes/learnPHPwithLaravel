@@ -22,9 +22,12 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/martialarts/{id}', function ($id) {
-    return view('martialArt', ['id' => $id]);
+Route::get('/martialarts', function () {
+    return view('martialArt');
 });
+//Route::get('/martialarts/{id}', function ($id) {
+//    return view('martialArt', ['id' => $id]);
+//});
 Route::get('/products', function () {
     
     $busca = request('search');

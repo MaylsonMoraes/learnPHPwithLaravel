@@ -3,7 +3,7 @@
 @section('title', 'Estilos de luta')
 
 @section('content')
-
-<p>Exibindo Artes Marciais id: {{ $id }}</p>
+<h1>Estilos de Luta</h1>
+<!--<p>Exibindo Artes Marciais id: {{ $id ?? '' }}</p>-->
 
 @endsection
