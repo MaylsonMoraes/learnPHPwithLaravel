@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+use App\Http\Controllers\EventController;
+
+Route::get('/', [EventController::class, 'index']);
+Route::get('/martialProgram/createMartialProgram', [EventController::class, 'create']);
+
 Route::get('/login', function () {
     return view('login');
 });

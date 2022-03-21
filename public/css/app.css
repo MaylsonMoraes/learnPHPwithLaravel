@@ -3,4 +3,8 @@
 }
 #navbar img {
     width: 50px;
+    margin-left: 10px;
+}
+.nav-link {
+    color: black; 
 }

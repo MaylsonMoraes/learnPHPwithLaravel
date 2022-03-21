@@ -30,6 +30,9 @@
                             <a href="/register" class="nav-link">Cadastrar</a>
                         </li>
                         <li class="nav-item">
+                            <a href="/martialProgram/createMartialProgram" class="nav-link">Criar</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/martialarts" class="nav-link">Estilos de Luta</a>
                         </li>
                         <li class="nav-item">
@@ -48,5 +51,7 @@
             <li class="list-inline-item"><a href="#">Support</a></li>
             </ul>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
