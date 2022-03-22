@@ -30,7 +30,7 @@
                             <a href="/register" class="nav-link">Cadastrar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/martialProgram/createMartialProgram" class="nav-link">Criar</a>
+                            <a href="/create" class="nav-link">Criar</a>
                         </li>
                         <li class="nav-item">
                             <a href="/martialarts" class="nav-link">Estilos de Luta</a>

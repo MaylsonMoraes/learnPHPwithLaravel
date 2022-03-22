@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/martialProgram/createMartialProgram', [EventController::class, 'create']);
+Route::get('/create', [EventController::class, 'create']);
 
 Route::get('/login', function () {
     return view('login');
