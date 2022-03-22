@@ -66,3 +66,54 @@ header {
     width: 50%;
     margin: 0 auto;
 }
+
+/* Programs list */
+#programs-container {
+    padding: 50px;
+}
+
+#programs-container h2{
+    margin-bottom: 10px;
+}
+
+#programs-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+}
+
+
+#programs-container .card {
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#events-container img{
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-date {
+    font-size: 12px;
+    color: #757575;
+}
+
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;      
+}
+
+.card-alunos {
+    font-size: 14px;
+    color: #757575;
+}
+

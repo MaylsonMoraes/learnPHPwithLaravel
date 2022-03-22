@@ -12,6 +12,7 @@
 </div>
 <div id="programs-container" class="col-md-12">
     <h2>Próximos Programas</h2>
+    <p class="subtitle">Veja os programas mais próximos</p>
     <div id="cards-container" class="row">
         @foreach($programs as $program)
         <div class="card col-md-3">
