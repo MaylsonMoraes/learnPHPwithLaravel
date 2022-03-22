@@ -1,10 +1,68 @@
+/* Geral */
 * {
     font-family: 'Roboto';
+}
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+header {
+    background-color: #FFF;
+    border-bottom: 1px solid #CCC;
+}
+
+.row{
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #6969f8;
+    border: 2px solid #4141b8;
+}
+.btn-primary:hover {
+    background-color: #4747d4;
+    border-color: #4747d4;
+}
+
+
+/* Navbar */
+.nav-link {
+    color: black; 
 }
 #navbar img {
     width: 50px;
     margin-left: 10px;
 }
-.nav-link {
-    color: black; 
+#navbar {
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 5px 0;
+}
+#navbar a {
+    font-size: 14px;
+}
+
+/* Search Container */
+#search-container {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
 }

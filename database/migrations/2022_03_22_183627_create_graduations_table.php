@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMartialgraduationTable extends Migration
+class CreateGraduationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMartialgraduationTable extends Migration
      */
     public function up()
     {
-        Schema::create('martialgraduation', function (Blueprint $table) {
+        Schema::create('graduations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string("statusofgraduation");
@@ -36,6 +36,6 @@ class CreateMartialgraduationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('martialgraduation');
+        Schema::dropIfExists('graduations');
     }
 }
