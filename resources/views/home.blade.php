@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
-@section('title', 'Home')
+@section('title', 'Chute Boxe No Stress')
 
 @section('content')
 
 <div id="search-container" class="col-md-12">
-    <h1>Busque Programas Marciais</h1>
+    <h1>Academia Chute Boxe No Stress</h1>
     <form action="">
-        <input type="text" id="search" name="search" class="form-control" placeholder="procurar...">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Busque Programas Marciais...">
     </form>
 </div>
 <div id="programs-container" class="col-md-12">
@@ -16,7 +16,7 @@
     <div id="cards-container" class="row">
         @foreach($programs as $program)
         <div class="card col-md-3">
-            <img src="/img/boxe.jpg" alt="{{ $program->name }}">
+            <img src="/img/logokarate.jpg" alt="{{ $program->name }}">
             <div class="card-body">
                 <p class="card-date">08/10/1988</p>
                 <h5 class="card-name">{{$program->name}}</h5>
