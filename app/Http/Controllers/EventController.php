@@ -27,9 +27,32 @@ class EventController extends Controller
         $program->style = $request->style;
         $program->type = $request->type;
 
+        //image Upload
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() .strtotime("now")) . "." . $extension;
+
+            $request->image->move(public_path('img/programs'), $imageName);
+
+            $program->image = $imageName;
+
+        }
+
         $program->save();
 
         return redirect('/')->with('msg', 'Programa Marcial criado com sucesso!');
         
     }
+
+    public function show($id) {
+        
+        $program = Program::findOrFail($id);
+
+        return view('programs.show', ['program'=>$program]);
+    }
 }
+

@@ -1,13 +1,17 @@
 @extends('layouts.main')
 
-@section('title', 'Create')
+@section('title', 'Criar Programa Marcial')
 
 @section('content')
 
 <div id="program-create-container" class="col-md-6 offset-md-3">
     <h1>Crie o seu Programa marcial</h1>
-    <form action="/programs" method="POST">
+    <form action="/programs" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label for="image">Imagem da Arte Marcial:</label>
+            <input type="file" id="image" name="image" class="form-control-file">   
+        </div>
         <div class="form-group">
             <label for="title">Arte marcial:</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Nome do programa">

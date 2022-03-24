@@ -17,6 +17,7 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
 Route::get('/create', [EventController::class, 'create']);
+Route::get('/programs/{id}', [EventController::class,'show']);
 Route::post('/programs', [EventController::class,'store']);
 
 Route::get('/login', function () {
@@ -28,9 +29,6 @@ Route::get('/register', function () {
 Route::get('/martialarts', function () {
     return view('martialArt');
 });
-//Route::get('/martialarts/{id}', function ($id) {
-//    return view('martialArt', ['id' => $id]);
-//});
 Route::get('/products', function () {
     
     $busca = request('search');
