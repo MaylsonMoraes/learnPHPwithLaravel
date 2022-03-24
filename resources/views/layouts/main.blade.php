@@ -42,7 +42,16 @@
                 </div>
             </nav>
         </header>
-        @yield('content')
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                        <p class="msg">{{ session('msg') }}</p>
+                    @endif
+                    @yield('content')    
+                </div>
+            </div>
+        </main>
         <footer class="my-5 pt-5 text-muted text-center text-small">
             <p class="mb-1">&copy; 2022 Academia Chute Boxe No Stress</p>
             <ul class="list-inline">

@@ -21,12 +21,22 @@ header {
 }
 
 .btn-primary {
-    background-color: #6969f8;
+    background-color: #3030e6;
     border: 2px solid #4141b8;
 }
 .btn-primary:hover {
     background-color: #4747d4;
     border-color: #4747d4;
+}
+
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -117,10 +127,19 @@ header {
     color: #757575;
 }
 
-/*program list*/
+/*program create page*/
 
 #program-create-container {
-    padding: 50px;
+    padding: 30px;
+}
+
+#program-create-container label {
+    font-weight: bold;
+}
+
+#program-create-container input,
+#program-create-container select {
+    font-size: 16px;
 }
 
 #program-create-container .form-group {

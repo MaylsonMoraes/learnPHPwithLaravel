@@ -29,7 +29,7 @@ class EventController extends Controller
 
         $program->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg', 'Programa Marcial criado com sucesso!');
         
     }
 }
