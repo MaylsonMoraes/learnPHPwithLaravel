@@ -26,6 +26,7 @@ class EventController extends Controller
         $program->name = $request->name;
         $program->style = $request->style;
         $program->type = $request->type;
+        $program->items = $request->items; 
 
         //image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {
