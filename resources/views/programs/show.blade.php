@@ -15,7 +15,7 @@
                 <p class="program-type"><ion-icon name="people-outline"></ion-icon> {{ $program->type }} </p>
                 <p class="program-students"><ion-icon name="people-outline"></ion-icon> x Alunos </p>
                 <p class="program-teacher"><ion-icon name="star-outline"></ion-icon> Professor </p>
-                <a href="#" class="btn btn-primary" id="event-submit"> Inscrever-se </a>
+                <a href="#" class="btn btn-primary" id="program-submit"> Inscrever-se </a>
             </div>
         </div>
     </div>

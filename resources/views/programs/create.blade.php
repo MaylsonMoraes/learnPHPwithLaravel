@@ -28,6 +28,22 @@
                 <option>Adultos</option>
                 <option>Idosos</option>
                 <option>Todos</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="title">Itens necessários para práticar:</label>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Kimono"> Kimono
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Faixa"> Faixa
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Luva"> Luva
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Espada de treino"> Espada de treino
+            </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Criar Programa">
     </form>
