@@ -5,6 +5,21 @@
 @section('content')
 
 <div id="program-create-container" class="col-md-6 offset-md-3">
+    
+    @if($errors)
+
+        @foreach($errors->all() as $errors)
+
+            <li style="color: red;">
+
+                {{ $errors }}
+
+            </li>
+        
+        @endforeach
+        
+    @endif    
+
     <h1>Crie o seu Programa marcial</h1>
     <form action="/programs" method="POST" enctype="multipart/form-data">
         @csrf
@@ -15,6 +30,10 @@
         <div class="form-group">
             <label for="title">Arte marcial:</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Nome do programa">
+        </div>
+        <div class="form-group">
+            <label for="date">Data de início:</label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="Início da Turma">
         </div>
         <div class="form-group">
             <label for="title">Estilo:</label>

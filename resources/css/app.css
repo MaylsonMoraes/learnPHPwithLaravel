@@ -1,8 +1,7 @@
-/* General */
+/* Geral */
 * {
     font-family: 'Roboto';
 }
-
 body {
     min-height: 100vh;
     padding-bottom: 100px;
@@ -22,10 +21,173 @@ header {
 }
 
 .btn-primary {
-    background-color: #000080;
-    border: 2px solid #191970;
+    background-color: #3030e6;
+    border: 2px solid #4141b8;
+}
+.btn-primary:hover {
+    background-color: #4747d4;
+    border-color: #4747d4;
 }
 
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Navbar */
+.nav-link {
+    color: black; 
+}
 #navbar img {
     width: 50px;
+    margin-left: 10px;
+}
+#navbar {
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 5px 0;
+}
+#navbar a {
+    font-size: 14px;
+}
+
+/* Search Container */
+#search-container {
+    background-image: url("../img/bannerPB.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Programs list */
+#programs-container {
+    padding: 50px;
+}
+
+#programs-container h2{
+    margin-bottom: 10px;
+}
+
+#programs-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+}
+
+
+#programs-container .card {
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5%;
+}
+
+#programs-container img{
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-date {
+    font-size: 12px;
+    color: #757575;
+}
+
+.card .card-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;      
+}
+
+.card-alunos {
+    font-size: 14px;
+    color: #757575;
+}
+
+/*program create page*/
+
+#program-create-container {
+    padding: 30px;
+}
+
+#program-create-container label {
+    font-weight: bold;
+}
+
+#program-create-container input,
+#program-create-container select {
+    font-size: 16px;
+}
+
+#program-create-container .form-group {
+    padding: 10px;
+}
+
+#program-create-container .btn-primary {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Program page */
+
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #3030e6;
+    margin-right: 5px;
+}
+
+#info-container #program-submit {
+    margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
 }

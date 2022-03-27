@@ -20,6 +20,14 @@ class EventController extends Controller
     }
 
     public function store(Request $request) {
+
+        $request->validate([
+
+            'name' => 'required|max:255',
+            'style' => 'required|max:255',
+            'type' => 'required|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'              
+        ]);
         
         $program = new Program;
 

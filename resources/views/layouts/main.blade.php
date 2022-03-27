@@ -20,7 +20,7 @@
             <nav class="navbar navbar-expand-lg navbar-ligth">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
-                        <img src="img/caneca.jpg" alt="Chute Boxe No Stress">
+                        <img src="/img/caneca.jpg" alt="Chute Boxe No Stress">
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
