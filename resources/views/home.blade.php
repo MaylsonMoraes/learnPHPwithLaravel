@@ -18,13 +18,16 @@
         <div class="card col-md-3">
             <img src="/img/programs/{{ $program->image }}" alt="{{ $program->name }}">
             <div class="card-body">
-                <p class="card-date">08/10/1988</p>
+                <p class="card-date">Data de início: {{$program->date}}</p>
                 <h5 class="card-name">{{$program->name}}</h5>
-                <p class="card-alunos">X alunos</p>
+                <p class="card-students">Quantidade de alunos: {{$program->students}}</p>
                 <a href="/programs/{{ $program->id }}" class="btn btn-primary">Saber mais</a>
             </div>
         </div>
         @endforeach
+        @if(count($programs) == 0)
+            <p>Não há programas marciais disponíveis</p>
+        @endif
     </div>
 </div>
 

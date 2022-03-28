@@ -26,7 +26,9 @@ class EventController extends Controller
             'name' => 'required|max:255',
             'style' => 'required|max:255',
             'type' => 'required|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'              
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp,|max:2048',
+            'date' => 'required|date',
+            'students' => 'required|numeric'              
         ]);
         
         $program = new Program;
@@ -34,7 +36,9 @@ class EventController extends Controller
         $program->name = $request->name;
         $program->style = $request->style;
         $program->type = $request->type;
-        $program->items = $request->items; 
+        $program->items = $request->items;
+        $program->date = $request->date;
+        $program->students = $request->students;
 
         //image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {

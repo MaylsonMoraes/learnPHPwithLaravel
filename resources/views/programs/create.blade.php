@@ -32,12 +32,16 @@
             <input type="text" class="form-control" id="name" name="name" placeholder="Nome do programa">
         </div>
         <div class="form-group">
-            <label for="date">Data de início:</label>
-            <input type="date" class="form-control" id="date" name="date" placeholder="Início da Turma">
-        </div>
-        <div class="form-group">
             <label for="title">Estilo:</label>
             <input type="text" class="form-control" id="style" name="style" placeholder="Estilo de luta">
+        </div>
+        <div class="form-group">
+            <label for="date">Data de início:</label>
+            <input type="date" class="form-control" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="title">Quantidade de alunos:</label>
+            <input type="text" class="form-control" id="students" name="students" placeholder="Quantidade de Alunos">
         </div>
         <div class="form-group">
             <label for="title">Faixa etária:</label>
