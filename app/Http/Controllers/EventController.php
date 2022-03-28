@@ -9,10 +9,18 @@ use App\Models\Program;
 class EventController extends Controller
 {
     public function index(){
-        
-        $programs = Program::all();
 
-        return view('home',['programs'=> $programs]);
+        $search = request('search');
+        
+        if ($search) {
+            $programs = Program::where('name', 'like', "%$search%")
+                                ->orWhere('type', 'like', "%$search%")
+                                ->get();
+        } else {
+            $programs = Program::all();
+        }
+
+        return view('home',['programs'=> $programs, 'search' => $search]);
     }
 
     public function create() {

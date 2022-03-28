@@ -20,18 +20,10 @@ Route::get('/create', [EventController::class, 'create']);
 Route::get('/programs/{id}', [EventController::class,'show']);
 Route::post('/programs', [EventController::class,'store']);
 
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/register', function () {
-    return view('register');
-});
 Route::get('/martialarts', function () {
     return view('martialArt');
 });
-Route::get('/products', function () {
-    
-    $busca = request('search');
 
-    return view('product', ['busca' => $busca]);
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
