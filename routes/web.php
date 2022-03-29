@@ -24,6 +24,5 @@ Route::get('/martialarts', function () {
     return view('martialArt');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard',[EventController::class, 'dashboard'])->middleware('auth');
+

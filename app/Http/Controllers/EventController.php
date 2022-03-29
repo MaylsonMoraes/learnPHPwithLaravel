@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Program;
 
+use App\Models\User;
+
 class EventController extends Controller
 {
     public function index(){
@@ -76,7 +78,18 @@ class EventController extends Controller
         
         $program = Program::findOrFail($id);
 
-        return view('programs.show', ['program'=>$program]);
+        $teacher = User::where('id', $program->user_id)->first()->toArray();
+
+        return view('programs.show', ['program'=>$program, 'teacher'=>$teacher]);
+    }
+
+    public function dashboard() {
+
+        $user = auth()->user();
+           
+        $programs = $user->programs;
+
+        return view('programs.dashboard', ['programs' => $programs]);
     }
 }
 
