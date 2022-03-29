@@ -13,8 +13,8 @@
                 <h1>{{ $program->name }}</h1>
                 <p class="program-style"><ion-icon name="" ></ion-icon> {{ $program->style }} </p>
                 <p class="program-type"><ion-icon name="people-outline"></ion-icon> {{ $program->type }} </p>
-                <p class="program-students"><ion-icon name="people-outline"></ion-icon> x Alunos </p>
-                <p class="program-teacher"><ion-icon name="star-outline"></ion-icon> Professor </p>
+                <p class="program-students"><ion-icon name="people-outline"></ion-icon> {{ $program->students }} Alunos </p>
+                <p class="program-teacher"><ion-icon name="star-outline"></ion-icon> Professor {{ $program->user->name }} </p>
                 <a href="#" class="btn btn-primary" id="program-submit"> Inscrever-se </a>
                 <h3>É necessário para este programa marcial:</h3>
                 <ul id="items-list">

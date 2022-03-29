@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/create', [EventController::class, 'create']);
+Route::get('/create', [EventController::class, 'create'])->middleware('auth');
 Route::get('/programs/{id}', [EventController::class,'show']);
 Route::post('/programs', [EventController::class,'store']);
 

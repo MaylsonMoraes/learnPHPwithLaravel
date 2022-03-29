@@ -63,6 +63,9 @@ class EventController extends Controller
 
         }
 
+        $user = auth()->user();
+        $program->user_id = $user->id;
+
         $program->save();
 
         return redirect('/')->with('msg', 'Programa Marcial criado com sucesso!');

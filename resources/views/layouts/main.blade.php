@@ -23,19 +23,6 @@
                         <img src="/img/caneca.jpg" alt="Chute Boxe No Stress">
                     </a>
                     <ul class="navbar-nav">
-                        @auth
-                        <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">Meus Programas</a>
-                        </li>
-                        <li class="nav-item">
-                            <form href="/logout" method="POST">
-                                @csrf
-                                <a href="/logout" 
-                                class="nav-link"
-                                onclick="event.preventDefault();">Sair</a>
-                            </form>
-                        </li>
-                        @endauth
                         @guest
                         <li class="nav-item">
                             <a href="/login" class="nav-link">Entrar</a>
@@ -53,6 +40,20 @@
                         <li class="nav-item">
                             <a href="/products" class="nav-link">Produtos</a>
                         </li>
+                        @auth
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">Meus Programas</a>
+                        </li>
+                        <li class="nav-item">
+                            <form href="/logout" method="GET">
+                                @csrf
+                                <a href="/logout" 
+                                class="nav-link"
+                                onclick="event.preventDefault();
+                                        this.closest('form').submit();">Sair</a>
+                            </form>
+                        </li>
+                        @endauth
                     </ul>
                 </div>
             </nav>
