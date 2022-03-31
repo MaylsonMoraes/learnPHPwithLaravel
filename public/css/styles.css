@@ -202,3 +202,15 @@
   .dashboard-programs-container th {
     width: 25%;
   }
+
+  .dashboard-programs-container form {
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+  /*Edit Page*/
+  .img-preview {
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }

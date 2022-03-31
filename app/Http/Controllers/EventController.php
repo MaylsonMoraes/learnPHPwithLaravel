@@ -91,5 +91,42 @@ class EventController extends Controller
 
         return view('programs.dashboard', ['programs' => $programs]);
     }
+
+    public function destroy($id) {
+
+        Program::findOrFail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Programa Marcial deletado com sucesso!');
+    }
+
+    public function edit($id) {
+
+        $program = Program::findOrFail($id);
+
+        return view('programs.edit', ['program' => $program]);
+    }
+
+    public function update(Request $request) {
+
+        $data = $request->all();
+        
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() .strtotime("now")) . "." . $extension;
+
+            $request->image->move(public_path('img/programs'), $imageName);
+
+            $data['image'] = $imageName;
+
+        }
+        
+        Program::findOrFail($request->id)->update($data);
+
+        return redirect('/dashboard')->with('msg', 'Programa Marcial editado com sucesso!');
+    }
 }
 
