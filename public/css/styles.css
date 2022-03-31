@@ -190,3 +190,15 @@
   #items-list li {
     display: flex;
   }
+
+  /*Dashboard*/
+  .dashboard-title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .dashboard-programs-container th {
+    width: 25%;
+  }
