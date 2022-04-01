@@ -15,7 +15,16 @@
                 <p class="program-type"><ion-icon name="people-outline"></ion-icon> {{ $program->type }} </p>
                 <p class="program-students"><ion-icon name="people-outline"></ion-icon> {{ $program->students }} Alunos </p>
                 <p class="program-teacher"><ion-icon name="star-outline"></ion-icon> Professor {{ $teacher['name'] }} </p>
-                <a href="#" class="btn btn-primary" id="program-submit"> Inscrever-se </a>
+                <form action="/programs/signup/{{ $program->id }}" method="POST">
+                    @csrf
+                    <a href="/programs/signup/{{ $program->id }}" 
+                        class="btn btn-primary"
+                        id="program-submit"
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        Inscrever-se 
+                    </a>
+                </form>
                 <h3>É necessário para este programa marcial:</h3>
                 <ul id="items-list">
                     @foreach ($program->items as $item)

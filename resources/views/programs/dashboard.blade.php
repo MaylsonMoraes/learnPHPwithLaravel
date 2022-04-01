@@ -37,7 +37,7 @@
         </tbody>
     </table>
     @else
-    <p>Você ainda nao possui programas marciais cadastrados,<a href="/programs/create">Criar Programa Marcial</a></p>
+    <p>Você ainda nao possui programas marciais cadastrados,<a href="/create">Criar Programa Marcial</a></p>
     @endif
 </div>
 @endsection

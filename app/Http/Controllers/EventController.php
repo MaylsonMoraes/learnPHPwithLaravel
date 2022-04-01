@@ -128,5 +128,16 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg', 'Programa Marcial editado com sucesso!');
     }
+
+    public function signup($id) {
+
+        $user = auth()->user();
+
+        $user->programsStudents()->attach($id);
+
+        $program = Program::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Você se inscreveu no programa: ' . $program->name);
+    }
 }
 

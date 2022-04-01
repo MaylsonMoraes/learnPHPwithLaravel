@@ -59,8 +59,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function programs()
-    {
-        return $this->hasMany(Program::class);
+    public function programs() {
+        return $this->hasMany('App\Models\Program');
+    }
+
+    public function programsStudents() {
+        return $this->belongsToMany('App\Models\Program');
     }
 }

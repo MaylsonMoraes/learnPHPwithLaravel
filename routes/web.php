@@ -28,4 +28,5 @@ Route::get('/martialarts', function () {
 });
 
 Route::get('/dashboard',[EventController::class, 'dashboard'])->middleware('auth');
+Route::post('/programs/signup/{id}',[EventController::class, 'signup'])->middleware('auth');
 
