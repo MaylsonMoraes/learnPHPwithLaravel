@@ -60,10 +60,10 @@ class User extends Authenticatable
     ];
 
     public function programs() {
-        return $this->hasMany('App\Models\Program');
+        return $this->hasMany(Program::class);
     }
 
     public function programsStudents() {
-        return $this->belongsToMany('App\Models\Program');
+        return $this->belongsToMany(Program::class, 'programs_users');
     }
 }

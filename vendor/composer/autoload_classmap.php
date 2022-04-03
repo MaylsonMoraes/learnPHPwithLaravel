@@ -28,6 +28,7 @@ return array(
     'App\\Models\\Graduation' => $baseDir . '/app/Models/Graduation.php',
     'App\\Models\\Program' => $baseDir . '/app/Models/Program.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\registerStudent' => $baseDir . '/app/Models/registerStudent.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

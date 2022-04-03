@@ -27,7 +27,7 @@
                             <a href="/martialarts" class="nav-link">Estilos de Luta</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/products" class="nav-link">Produtos</a>
+                            <a href="/registerStudent" class="nav-link">Cadastrar Aluno</a>
                         </li>
                         @auth
                         <li class="nav-item">

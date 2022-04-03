@@ -8,6 +8,8 @@ use App\Models\Program;
 
 use App\Models\User;
 
+use App\Models\RegisterStudent;
+
 class EventController extends Controller
 {
     public function index(){
@@ -139,5 +141,52 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg', 'Você se inscreveu no programa: ' . $program->name);
     }
+
+    public function registerStudent() {
+
+        return view('register'); 
+    }
+
+    public function signupStudent(Request $request) {
+
+        $request->validate([
+
+            'firstName' => 'required|max:255',
+            'lastName' => 'required|email|max:255',
+            'fone' => 'required|numeric',
+            'address' => 'required|max:255',
+            'zip' => 'required|max:255',
+            'city' => 'required|max:255',
+            'state' => 'required|max:255',
+            'country' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'sex' => 'required|max:255',
+            'birthDate' => 'required|date|numeric'
+
+        ]);
+
+        $register_student = new RegisterStudent;
+
+        $register_student->firstName = $request->firstName;
+        $register_student->lastName = $request->lastName;
+        $register_student->fone = $request->fone;
+        $register_student->address = $request->address;
+        $register_student->zip = $request->zip;
+        $register_student->city = $request->city;
+        $register_student->state = $request->state;
+        $register_student->country = $request->country;
+        $register_student->email = $request->email;
+        $register_student->sex = $request->sex;
+        $register_student->birthDate = $request->birthDate;
+
+        
+        
+        
+
+        $register_student->save();
+
+        return redirect('home')->with('msg', 'Aluno cadastrado com sucesso!');
+    }   
+
 }
 
