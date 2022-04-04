@@ -152,16 +152,15 @@ class EventController extends Controller
         $request->validate([
 
             'firstName' => 'required|max:255',
-            'lastName' => 'required|email|max:255',
-            'fone' => 'required|numeric',
+            'lastName' => 'required|max:255',
+            'fone' => 'required|max:255',
             'address' => 'required|max:255',
             'zip' => 'required|max:255',
-            'city' => 'required|max:255',
             'state' => 'required|max:255',
             'country' => 'required|max:255',
             'email' => 'required|email|max:255',
             'sex' => 'required|max:255',
-            'birthDate' => 'required|date|numeric'
+            'birthDate' => 'required|max:255'
 
         ]);
 
@@ -172,7 +171,6 @@ class EventController extends Controller
         $register_student->fone = $request->fone;
         $register_student->address = $request->address;
         $register_student->zip = $request->zip;
-        $register_student->city = $request->city;
         $register_student->state = $request->state;
         $register_student->country = $request->country;
         $register_student->email = $request->email;
@@ -185,7 +183,7 @@ class EventController extends Controller
 
         $register_student->save();
 
-        return redirect('home')->with('msg', 'Aluno cadastrado com sucesso!');
+        return redirect('/')->with('msg', 'Aluno cadastrado com sucesso!');
     }   
 
 }

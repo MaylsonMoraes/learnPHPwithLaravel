@@ -23,6 +23,7 @@ Route::delete('/programs/{id}', [EventController::class,'destroy'])->middleware(
 Route::get('/programs/edit/{id}', [EventController::class,'edit'])->middleware('auth');
 Route::put('/programs/update/{id}', [EventController::class,'update'])->middleware('auth');
 Route::get('/registerStudent', [EventController::class, 'registerStudent'])->middleware('auth');
+Route::post('/register_students', [EventController::class, 'signupStudent'])->middleware('auth');
 
 Route::get('/martialarts', function () {
     return view('martialArt');

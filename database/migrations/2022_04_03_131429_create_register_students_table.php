@@ -18,15 +18,14 @@ class CreateRegisterStudentsTable extends Migration
             $table->timestamps();
             $table->string('firstName');
             $table->string('lastName');
-            $table->integer('fone');
+            $table->string('fone');
             $table->string('address');
-            $table->integer('zip');
-            $table->string('city');
+            $table->string('zip');
             $table->string('state');
             $table->string('country');
             $table->string('email');
             $table->string('sex');
-            $table->date('birthDate');
+            $table->string('birthDate');
         });
     }
 
