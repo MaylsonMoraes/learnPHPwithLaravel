@@ -91,7 +91,9 @@ class EventController extends Controller
            
         $programs = $user->programs;
 
-        return view('programs.dashboard', ['programs' => $programs]);
+        $programsAsParticipant = $user->programsAsParticipant;
+
+        return view('programs.dashboard', ['programs' => $programs, 'programsAsParticipant' => $programsAsParticipant]);
     }
 
     public function destroy($id) {

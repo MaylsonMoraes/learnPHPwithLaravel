@@ -25,6 +25,7 @@
                 <p class="card-date">Data de início: {{ date('d/m/Y', strtotime($program->date)) }}</p>
                 <h5 class="card-name">{{$program->name}}</h5>
                 <p class="card-students">Quantidade de alunos: {{$program->students}}</p>
+                <p class="card-programs_users">Quantidade de alunos inscritos: {{ isset($users) && count($users)  }}</p>
                 <p class="card-type">Faixa etária: {{$program->type}}</p>
                 <a href="/programs/{{ $program->id }}" class="btn btn-primary">Saber mais</a>
             </div>
