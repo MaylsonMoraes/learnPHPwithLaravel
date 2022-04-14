@@ -91,9 +91,12 @@ class EventController extends Controller
            
         $programs = $user->programs;
 
-        $programsAsParticipant = $user->programsAsParticipant;
+        $programsAsStudent = $programs->programsAsStudent;
 
-        return view('programs.dashboard', ['programs' => $programs, 'programsAsParticipant' => $programsAsParticipant]);
+        return view('programs.dashboard', 
+        ['programs' => $programs, 'programsAsStudent' => $programsAsStudent]
+        );
+    
     }
 
     public function destroy($id) {
@@ -137,7 +140,7 @@ class EventController extends Controller
 
         $user = auth()->user();
 
-        $user->programsStudents()->attach($id);
+        $user->programsAsStudent()->attach($id);
 
         $program = Program::findOrFail($id);
 

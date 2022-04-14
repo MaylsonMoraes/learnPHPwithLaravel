@@ -63,7 +63,7 @@ class User extends Authenticatable
         return $this->hasMany(Program::class);
     }
 
-    public function programsStudents() {
+    public function programsAsStudent() {
         return $this->belongsToMany(Program::class, 'programs_users');
     }
 }
